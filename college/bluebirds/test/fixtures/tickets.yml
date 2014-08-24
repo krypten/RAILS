@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Viewing_id: 
+  show_date: 2014-04-12
+  Order_id: 
+
+two:
+  Viewing_id: 
+  show_date: 2014-04-12
+  Order_id: 

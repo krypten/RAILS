@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1
+  total_amount: 9.99
+  payment_success: false
+  mode_of_collection: MyString
+  Courier_id: 
+  BillingInfo_id: 
+  User_id: 
+
+two:
+  quantity: 1
+  total_amount: 9.99
+  payment_success: false
+  mode_of_collection: MyString
+  Courier_id: 
+  BillingInfo_id: 
+  User_id: 

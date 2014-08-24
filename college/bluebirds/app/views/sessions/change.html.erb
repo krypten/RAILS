@@ -1,0 +1,21 @@
+
+
+<div class="user_form">
+<% if flash[:alert] %>
+  <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<%= form_tag do %>
+  <fieldset>
+  <h3>Please Enter your new Password</h3>
+  <div>
+    <legend></legend>
+    <%= label_tag :password, 'New password:   ' %>
+    <%= text_field_tag :password, params[:password] %>
+  </div>
+  <br />
+  <div>
+    <%= submit_tag "Change Password" %>
+  </div>
+  </fieldset>
+<% end %>
+</div>

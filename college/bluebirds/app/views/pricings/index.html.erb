@@ -1,0 +1,29 @@
+<h1>Listing pricings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Seat type</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pricings.each do |pricing| %>
+      <tr>
+        <td><%= pricing.seat_type %></td>
+        <td><%= pricing.price %></td>
+        <td><%= link_to 'Show', pricing %></td>
+        <td><%= link_to 'Edit', edit_pricing_path(pricing) %></td>
+        <td><%= link_to 'Destroy', pricing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pricing', new_pricing_path %>

@@ -1,0 +1,31 @@
+
+<h1> Book Ticket </h1>
+  <div>
+    <div align="right"><iframe align="center" src="http://www.calendarlabs.com/calendars/web-content/calendar.php?cid=1001&uid=78833558&c=4&l=en&cbg=FFFFFF&cfg=000000&hfg=3300FF&hfg1=000000&ct=1&cb=1&cbc=000000&cf=arial&cp=bottom&sw=1&hp=t&ib=0&ibc=&i=images/" width="170" height="155" marginwidth=0 marginheight=0 frameborder=no scrolling=no allowtransparency='true'>Loading...</iframe><div align="center" style="width:140px;font-size:10px;color:#777;"></div></div>
+  </div>
+
+<%= form_tag(@movie) do %>
+  <br />
+  <div class="dropdown">
+  <%= label :movie_id ,'Select Movie' %> <br />
+  <%= select(params[:movie_id], :movie_id, Movie.all.collect {|m| [ m.movie_name, m.id ] }) %>
+  </div>
+   <div class="date">
+    <%= label params[:show_date], 'Show Date'%> <br />
+    <%= date_select :show_date, params[:show_date] %>
+  </div>
+
+
+  <div>
+    <%= label params[:timing], 'Select Timing' %> <br />
+    <%= select(params[:timing], :timing, @books) %>
+  </div>
+ 
+  <br />
+  <div class="submit">
+     <%= submit_tag "Next" %>
+  </div>
+
+
+
+<% end %>

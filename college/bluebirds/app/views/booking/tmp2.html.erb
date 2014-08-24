@@ -1,0 +1,26 @@
+<%= form_tag do %>
+  <br />
+
+  <%= "Choose the Seat no : "%> <%= session[:ticket_no] %> <br />
+  <br />
+  <div class="field">
+    <%= label :screen_no ,'Select Screen' %> <br />
+    <%= select(params[:screen_no], :screen_no, @viewings.collect {|a| [ a.AudiInfo.screen_no] }) %>
+  </div>
+  <div>
+    <%= label :seat_no, 'seat_no' %> <br />
+    <%= select(params[:seat_no], :seat_no, @viewings.collect {|a| [ a.AudiInfo.seat_no] }) %>
+    
+  </div>
+  <br />
+  <div class="submit">
+     <%= submit_tag "Book Ticket" %>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div >
+    <%= link_to "Back", root_url %>
+  </div>
+
+<% end %>

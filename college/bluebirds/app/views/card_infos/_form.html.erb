@@ -1,0 +1,38 @@
+<%= form_for(@card_info) do |f| %>
+  <% if @card_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card_info.errors.count, "error") %> prohibited this card_info from being saved:</h2>
+
+      <ul>
+      <% @card_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="text">
+  <%= "Total Amount to be paid is " %> <%= number_to_currency(session[:total_amount], unit: "Rs", format: "%u %n")  %>
+  <br />
+  <br />
+  </div>
+
+  <div class="field">
+    <%= f.label :card_no %><br>
+    <%= f.text_field :card_no %>
+  </div>
+  <div class="field">
+    <%= f.label :card_holdername %><br>
+    <%= f.text_field :card_holdername %>
+  </div>
+  <div class="field">
+    <%= f.label :card_exp_date %><br>
+    <%= f.date_select :card_exp_date %>
+  </div>
+  <div class="field">
+    <%= f.label :card_pin, "Enter CVV No." %><br>
+    <%= f.number_field :card_pin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

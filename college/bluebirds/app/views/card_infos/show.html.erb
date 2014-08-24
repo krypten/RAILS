@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Card no:</strong>
+  <%= @card_info.card_no %>
+</p>
+
+<p>
+  <strong>Card holdername:</strong>
+  <%= @card_info.card_holdername %>
+</p>
+
+<p>
+  <strong>Card exp date:</strong>
+  <%= @card_info.card_exp_date %>
+</p>
+
+<p>
+  <strong>Card pin:</strong>
+  <%= @card_info.card_pin %>
+</p>
+
+<%= link_to 'Edit', edit_card_info_path(@card_info) %> |
+<%= link_to 'Back', card_infos_path %>

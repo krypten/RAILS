@@ -1,4 +1,4 @@
 RAILS
 =====
 
-Ruby On Rails Web App and Project Work
+Ruby On Rails Web Apps and Project Work

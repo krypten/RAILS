@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Screen no:</strong>
+  <%= @audi_info.screen_no %>
+</p>
+
+<p>
+  <strong>Seat no:</strong>
+  <%= @audi_info.seat_no %>
+</p>
+
+<p>
+  <strong>Pricing:</strong>
+  <%= @audi_info.Pricing %>
+</p>
+
+<%= link_to 'Edit', edit_audi_info_path(@audi_info) %> |
+<%= link_to 'Back', audi_infos_path %>

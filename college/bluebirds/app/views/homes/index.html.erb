@@ -1,0 +1,27 @@
+<div id="apDiv1">
+  <div class="carousel slide" id="artists">
+    <h2 align="center" style="font-style:italic">Now Showing</h2>
+    <div class="carousel-inner">
+      <% @movies.each do |movie| %>
+      <% if movie.id == 1 %>
+        <div class="item active">
+      <% else %>
+        <div class="item">
+      <% end %>
+        <p align="center"><img src="<%= movie.image_url %>" alt="<%= movie.movie_name %>"></p>
+        <div class="carousel-caption">
+          <h4><%= movie.movie_name %></h4>
+          <p><%= movie.description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <a href="#artists" class="left carousel-control" data-slide="prev">&lsaquo;</a> 
+  
+    <a href="#artists" class="right carousel-control" data-slide="next">&rsaquo;</a> 
+  </div>
+
+  <div id="footer">
+    <h4 align="left"><% 20.times do %>&nbsp;<% end%>Allahabad Cinemas : 136, M.G. Marg, Civil Lines, Allahabad. Contact : 8853549347, 987654321.</h4>
+  </div> 
+</div>

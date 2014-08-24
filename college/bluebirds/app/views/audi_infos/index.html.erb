@@ -1,0 +1,31 @@
+<h1>Listing audi_infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Screen no</th>
+      <th>Seat no</th>
+      <th>Pricing</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @audi_infos.each do |audi_info| %>
+      <tr>
+        <td><%= audi_info.screen_no %></td>
+        <td><%= audi_info.seat_no %></td>
+        <td><%= audi_info.Pricing %></td>
+        <td><%= link_to 'Show', audi_info %></td>
+        <td><%= link_to 'Edit', edit_audi_info_path(audi_info) %></td>
+        <td><%= link_to 'Destroy', audi_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Audi info', new_audi_info_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @viewing.Movie %>
+</p>
+
+<p>
+  <strong>Audiinfo:</strong>
+  <%= @viewing.AudiInfo %>
+</p>
+
+<p>
+  <strong>Timing:</strong>
+  <%= @viewing.timing %>
+</p>
+
+<%= link_to 'Edit', edit_viewing_path(@viewing) %> |
+<%= link_to 'Back', viewings_path %>

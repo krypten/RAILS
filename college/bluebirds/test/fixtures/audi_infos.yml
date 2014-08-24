@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  screen_no: 1
+  seat_no: MyString
+  Pricing_id: 
+
+two:
+  screen_no: 1
+  seat_no: MyString
+  Pricing_id: 

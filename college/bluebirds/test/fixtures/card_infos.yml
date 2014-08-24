@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_no: MyString
+  card_holdername: MyString
+  card_exp_date: 2014-04-12
+  card_pin: 1
+
+two:
+  card_no: MyString
+  card_holdername: MyString
+  card_exp_date: 2014-04-12
+  card_pin: 1

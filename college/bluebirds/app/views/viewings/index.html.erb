@@ -1,0 +1,31 @@
+<h1>Listing viewings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Movie</th>
+      <th>Audiinfo</th>
+      <th>Timing</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @viewings.each do |viewing| %>
+      <tr>
+        <td><%= viewing.Movie %></td>
+        <td><%= viewing.AudiInfo %></td>
+        <td><%= viewing.timing %></td>
+        <td><%= link_to 'Show', viewing %></td>
+        <td><%= link_to 'Edit', edit_viewing_path(viewing) %></td>
+        <td><%= link_to 'Destroy', viewing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Viewing', new_viewing_path %>

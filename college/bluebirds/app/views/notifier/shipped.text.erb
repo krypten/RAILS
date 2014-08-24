@@ -1,0 +1,13 @@
+Tickets Sending Details
+
+ <% if @order.Courier.present? %>
+  <%= "This is just to let you know that weve sent your tickets by Courier and its details as follow:
+" %>
+
+  <%= "Receiver_name :" %> <%= @order.Courier.receiver_name %>
+  <%= "Contact_number : " %>  <%= @order.Courier.contact_no %>
+  <%= "Address : " %>  <%= @order.Courier.address %>
+ <% else %> 
+  <%= "This is just to let you know that your tickets will be available at the counter" %>
+ <% end %>
+ Thank You

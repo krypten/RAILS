@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ 
+ *= require bootstrap.min
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/glyphicons-halflings-regular.eot');
+  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+       url('../assets/glyphicons-halflings-regular.woff') format('woff'), 
+       url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
+       url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+#apDiv1 {
+  position: absolute;
+  left: 8px;
+  top: 136px;
+  width: 977px;
+  height: 440px;
+  z-index: 104;
+}
+#apDiv3 {
+  position: absolute;
+  left: 1042px;
+  top: 128px;
+  width: 365px;
+  height: 300px;
+  z-index: 103;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+  float: right;
+  padding: 0px;
+}
+#apDiv4 {
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  width: 665px;
+  height: 600px;
+  z-index: 103;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  float: center;
+  padding: 10px;
+}
+#content {
+  position: relative;
+  left: 384px;
+  top: 19px;
+  width: 623px;
+  height: 360px;
+  z-index: 104;
+  padding: 10px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-color: rgba(0,153,204,0.3);
+}
+#image {
+  position: relative;
+  left: 11px;
+  top: 139px;
+  width: 353px;
+  height: 360px;
+  z-index: 105;
+  background-color: rgba(0,153,204,0.3);
+  padding: 10px;
+}
+a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #FFF;
+}
+a:hover {
+  text-decoration: none;
+  color: #F00;
+}
+a:active {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+body,td,th {
+  font-family: "Courier New", Courier, monospace;
+  color: #FFF;
+}
+body {
+  background-color: #000;
+  background-image: url(images/cinema-and-movie-templates.jpg);
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  width: 85%;
+}
+#header {
+  position: absolute;
+  left: 120px;
+  top: 0;
+  width: 770px;
+  height: 100px;
+  z-index: 101;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  letter-spacing: normal;
+  padding: 1%;
+  color: #F00;
+  background-color: rgba(0,0,0,0.8);
+  text-transform: none;
+  text-shadow: inherit;
+}
+#logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.8);
+  padding: 1%;
+}
+#quick {
+  position: absolute;
+  left: 917px;
+  top: 0;
+  width: 422px;
+  height: 100px;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.8);
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+  padding: 1%;
+  vertical-align: baseline;
+  text-align: justify;
+  list-style-type: none;
+  list-style-position: inside;
+}

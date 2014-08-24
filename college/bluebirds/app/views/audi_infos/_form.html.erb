@@ -1,0 +1,29 @@
+<%= form_for(@audi_info) do |f| %>
+  <% if @audi_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@audi_info.errors.count, "error") %> prohibited this audi_info from being saved:</h2>
+
+      <ul>
+      <% @audi_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :screen_no %><br>
+    <%= f.number_field :screen_no %>
+  </div>
+  <div class="field">
+    <%= f.label :seat_no %><br>
+    <%= f.text_field :seat_no %>
+  </div>
+  <div class="field">
+    <%= f.label :Pricing_id %><br>
+    <%= f.text_field :Pricing_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

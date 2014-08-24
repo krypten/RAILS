@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Viewing:</strong>
+  <%= @ticket.Viewing %>
+</p>
+
+<p>
+  <strong>Show date:</strong>
+  <%= @ticket.show_date %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @ticket.Order %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

@@ -1,0 +1,24 @@
+<%= form_tag do %>
+  <br />
+  <div class="dropdown">
+  <%= label  params[:movie_name] ,'Select Movie' %> <br />
+  <%= select(params[:movie_name] , Movie.all.collect {|m| [ m.movie_name, m.id ] }) %>
+  </div>
+  <div>
+    <%= label params[:timing], 'Select Timing' %> <br />
+    <%= select(Viewing, params[:timing] , Viewing.all.uniq.collect {|t| [ t.timing, t.id ] }) %>
+  </div>
+  <div class="field">
+    <%= label :quantity, 'Quantity  ' %><br>
+    <%= number_field :quantity, params[:quantity] %>
+  </div>
+  <div class="date">
+    <%= label params[:show_date], 'Show Date'%> <br />
+    <%= date_select(Date, params[:show_date], {:start_day => Time.now.day, :end_day => Time.now.day + 7} ) %>
+  </div>
+  <br />
+  <div class="submit">
+     <%= submit_tag "Next" %>
+  </div>
+
+<% end %>

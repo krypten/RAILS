@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Cinemas</title>
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+
+<!--
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+-->
+<link rel="shortcut icon" type="image/x-icon" href="/images/movie.png">
+
+<style type="text/css">
+@import url("webfonts/monsieurladoulaise_regular/stylesheet.css");
+
+#apDiv1 {
+  position: absolute;
+  left: 8px;
+  top: 136px;
+  width: 977px;
+  height: 440px;
+  z-index: 104;
+}
+#apDiv3 {
+  position: absolute;
+  left: 1042px;
+  top: 128px;
+  width: 365px;
+  height: 300px;
+  z-index: 103;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+  float: right;
+  padding: 0px;
+}
+#apDiv4 {
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  width: 865px;
+  height: 600px;
+  z-index: 103;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  float: center;
+  padding: 10px;
+}
+#content {
+  position: absolute;
+  left: 384px;
+  top: 148px;
+  width: 623px;
+  height: 360px;
+  z-index: 104;
+  padding: 10px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-color: rgba(0,153,204,0.3);
+}
+#image {
+  position: absolute;
+  left: 11px;
+  top: 148px;
+  width: 353px;
+  height: 360px;
+  z-index: 105;
+  background-color: rgba(0,153,204,0.3);
+  padding: 10px;
+}
+a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #FFF;
+}
+a:hover {
+  text-decoration: none;
+  color: #F00;
+}
+a:active {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+#footer {
+  position: absolute;
+  left: 0%;
+  top: 99%;
+  width: 1366px;
+  height: 55px;
+  z-index: 102;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 24px;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+}
+body,td,th {
+  font-family: "Courier New", Courier, monospace;
+  color: #FFF;
+}
+body {
+  background-color: #000;
+  background-image: url(/images/cinema-and-movie-templates.jpg);
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  width: 85%;
+}
+#header {
+  position: absolute;
+  left: 120px;
+  top: 0;
+  width: 770px;
+  height: 100px;
+  z-index: 101;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  letter-spacing: normal;
+  padding: 1%;
+  color: #F00;
+  background-color: rgba(0,0,0,0.8);
+  text-transform: none;
+  text-shadow: inherit;
+}
+#logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.8);
+  padding: 1%;
+}
+#quick {
+  position: absolute;
+  left: 916px;
+  top: 0px;
+  width: 422px;
+  height: 100px;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.8);
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 20px;
+  padding: 1%;
+  vertical-align: baseline;
+  text-align: justify;
+  list-style-type: none;
+  list-style-position: inside;
+
+#calendar {
+  position: absolute;
+  left: 847px;
+  top: 128px;
+  width: 149px;
+  height: 195px;
+  z-index: 104;
+  padding: 10px;
+}
+#notice {
+  position: absolute;
+  float: right;
+  top: 1028px;
+  padding: 10px;
+}
+
+</style>
+<link href="/SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css">
+<link href="/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+<link href="/SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
+<!-- Media Query 1 
+<link href="index1.html" rel="stylesheet" type="text/css" media="only screen and (min-width:800px)">
+-->
+
+<script src="/SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script src="/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+<div id="logo"><img src="/images/movie.png" width="98" height="94" alt="logo"></div>
+<div id="header">
+  <p>&nbsp;</p>
+  <h1>Fun Cinemas</h1>
+</div>
+<div id="quick">
+  <% if current_user %>
+    Logged in as <%= current_user.name %>.  
+    <a href="<%= logout_path %>" > Log out </a>
+  <% else %>
+    <a href="<%= new_user_path %>" > Sign up </a>or
+    <a href="<%= login_path %>" > Log in  </a>
+  <% end %>
+</div>
+
+<div>
+<% 4.times do %>
+  <br />
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <h5 align ="right" style="backgroud-color:black;"> Notice : <%= content_tag :div, msg, :id => "flash_#{name}" %></h5>
+<% end %>
+</div>
+
+
+<div id="apDiv3">
+  <ul id="MenuBar1" class="MenuBarVertical">
+    <li><a href= "<%= root_url %> ">Home</a></li>
+    <li><a href= "<%= movies_path %> ">Movies</a></li>
+    <li><a href= "<%= booking_book_path %> ">Book Ticket</a></li>
+    <% if current_user %>
+      <li><a href= "<%= user_path(session[:user_id]) %>" > User Profile</a></li>
+    <% else %>
+      <li><a href= "<%= root_url %>" > User Profile</a></li>
+    <% end %>
+    <li><a href="<%= location_loc_path %>" >Location</a></li>
+    <li><a href="<%= new_contact_path %>" >Contact Us</a></li>
+    <li><a href="<%= social_media_twitter_path %>" >Social Media</a></li>
+  </ul>
+</div>
+
+<div id="apDiv4">
+  <% 7.times do %>
+    <br />
+  <% end %>
+
+ <%= yield %>
+</div>
+
+<div id="apDiv2"></div>
+<div id="apDiv7"> </div>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;  </p>
+<script type="text/javascript">
+var sprypassword1  = new Spry.Widget.ValidationPassword("sprypassword1");
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"/SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

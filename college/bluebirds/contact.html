@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Fun Cinemas</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" type="image/x-icon" href="img/movie.png">
+
+<style type="text/css">
+@import url("webfonts/monsieurladoulaise_regular/stylesheet.css");
+
+body,td,th {
+	font-family: "Courier New", Courier, monospace;
+	color: #FFF;
+}
+body {
+	background-color: #000;
+	background-image: url(img/cinema-and-movie-templates.jpg);
+	background-size: auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 0%;
+}
+#header {
+	position: absolute;
+	left: 120px;
+	top: 0;
+	width: 770px;
+	height: 100px;
+	z-index: 101;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	font-weight: bolder;
+	font-style: normal;
+	vertical-align: baseline;
+	text-align: center;
+	letter-spacing: normal;
+	padding: 1%;
+	color: #F00;
+	background-color: rgba(0,0,0,0.8);
+	text-transform: none;
+	text-shadow: inherit;
+}
+#logo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100px;
+	height: 100px;
+	z-index: 100;
+	background-color: rgba(0,0,0,0.8);
+	padding: 1%;
+}
+#quick {
+	position: absolute;
+	left: 917px;
+	top: 0;
+	width: 422px;
+	height: 100px;
+	z-index: 100;
+	background-color: rgba(0,0,0,0.8);
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	padding: 1%;
+	vertical-align: baseline;
+	text-align: justify;
+	list-style-type: none;
+	list-style-position: inside;
+}
+register {
+	text-align: center;
+}
+</style>
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css">
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover {
+	text-decoration: none;
+	color: #F00;
+}
+a:active {
+	text-decoration: none;
+}
+#footer {
+	position: absolute;
+	left: 0px;
+	top: 590px;
+	width: 1366px;
+	height: 55px;
+	z-index: 102;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+}
+#apDiv3 {
+	position: absolute;
+	left: 1042px;
+	top: 128px;
+	width: 350px;
+	height: 300px;
+	z-index: 103;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: center;
+	float: right;
+	padding: 0px;
+}
+</style>
+<link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
+<!-- Media Query 1 -->
+<link href="index1.html" rel="stylesheet" type="text/css" media="only screen and (min-width:800px)">
+<style type="text/css">
+#content {	position: absolute;
+	left: 16px;
+	top: 128px;
+	width: 975px;
+	height: 450px;
+	z-index: 104;
+	font-family: Tahoma, Geneva, sans-serif;
+	padding: 20px;
+}
+</style>
+<link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
+<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="logo"><img src="img/movie.png" width="98" height="94" alt="logo"></div>
+<div id="header">
+  <h1>   Fun Cinemas</h1>
+</div>
+<div id="quick">
+  <form name="form1" method="post" action="">
+    <span id="sprytextfield1">
+      <label for="login3"></label>
+      <input name="login" type="text" id="login3">
+      <span class="textfieldRequiredMsg">A value is required.</span></span>
+  username
+  
+    <span id="sprypassword1">
+      <label for="password"></label>
+      <input name="password" type="password" id="password">
+      <span class="passwordRequiredMsg">A value is required.</span></span>password
+      
+    <p>
+      <input type="submit" name="login2" id="login" value="login">
+       <a href="register.html"><strong>Register </strong></a></p>
+  </form>
+</div>
+</div>
+<div id="footer">
+  <p>Allahabad Cinemas : 136, M.G. Marg, Civil Lines, Allahabad. Contact : 8853549347, 987654321.</p>
+</div>
+<div id="apDiv3">
+  <ul id="MenuBar1" class="MenuBarVertical">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movies</a></li>
+    <li><a href="bookticket.html">Book Ticket</a></li>
+    <li><a href="userprofile.html">User Profile</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="socialmedia.html">Social Media</a></li>
+  </ul>
+</div>
+<div id="apDiv2"></div>
+<div id="apDiv7"> </div>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<div id="content">
+  <h2 align="center">Contact Us</h2></br>
+  <form name="form3" method="post" action="">
+    <span id="sprytextfield2">
+    <label for="name"></label>
+      <input type="text" name="name" id="name">
+    <span class="textfieldRequiredMsg">A value is required.</span></span><span id="sprytextfield4">
+    <label for="email"></label>
+    <input type="text" name="email" id="email">
+    <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span>    <span id="sprytextfield3">
+    <label for="phone"></label>
+    <input type="text" name="phone" id="phone">
+    <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span><span id="sprytextarea1">
+    <label for="comment"></label>
+    <textarea name="comment" id="comment" cols="45" rows="5"></textarea>
+    <span id="countsprytextarea1">&nbsp;</span><span class="textareaRequiredMsg">A value is required.</span><span class="textareaMaxCharsMsg">Exceeded maximum number of charact</span></span>
+    <p><input type="submit" name="submit" id="submit" value="Submit"></p>
+  <p align="center">&nbsp;</p>
+  </form>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;  </p>
+<script type="text/javascript">
+var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "none", {hint:"your name"});
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "phone_number", {hint:"your phone no."});
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1", {validateOn:["blur"], maxChars:100, counterType:"chars_remaining", counterId:"countsprytextarea1", hint:"write to us (max 100 characters)"});
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4", "email", {hint:"your email"});
+</script>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

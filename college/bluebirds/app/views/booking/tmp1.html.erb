@@ -1,0 +1,16 @@
+<%= form_tag do %>
+
+  <div class="field">
+  <%= label :seat_type ,'Select class' %> <br />
+  <%= select(params[:seat_type], :seat_type, @seats.collect {|s| [ s.seat_type]} ) %>
+  </div>
+  <div class="field">
+    <%= label :quantity, 'Quantity  ' %><br>
+    <%= number_field :quantity, params[:quantity] %>
+  </div>
+  <br />
+  <div class="submit">
+     <%= submit_tag "Next" %>
+  </div>
+
+<% end %>

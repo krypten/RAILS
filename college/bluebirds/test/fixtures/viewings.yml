@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Movie_id: 
+  AudiInfo_id: 
+  timing: 2014-04-12 22:29:11
+
+two:
+  Movie_id: 
+  AudiInfo_id: 
+  timing: 2014-04-12 22:29:11

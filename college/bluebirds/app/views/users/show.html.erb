@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div id="image">
+	<img src="/images/user.png" width="351" height="280">
+</div>
+<div id="content">
+<h2 align="center"><%= @user.name %></h2>
+<h4>Email id : <%= @user.email %></h4>
+<h4>Contact No : <%= @user.contact_no %></h4></br>
+<h5>History : </h5>
+<table>
+  <thead>
+    <tr>
+      <th>   Movie       </th>
+      <th>   Screen no   </th>
+      <th>   Seat No     </th>
+      <th>   Total Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historys.each do |his| %>
+      <tr>
+        
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+<% 23.times do %>
+  <br />
+ <% end %>
+
+
+<%= link_to '   Edit   ', edit_user_path(@user) %> 		| 
+<%= link_to '   Home   ', root_url %>    		|  
+<%= link_to '   Change Password   ', change_path %>

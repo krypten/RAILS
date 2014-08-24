@@ -1,0 +1,5 @@
+Dear <%= @order.User.name %>
+Thank you for your recent order from our Cinema.
+<% if @order.Courier.present? %>
+  <%= "You ordered tickets will be delivered to you and we will send you a separate e-mail when your order ships." %>
+<% end %>
